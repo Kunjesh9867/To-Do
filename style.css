@@ -1,0 +1,180 @@
+/* GROUP-2
+
+AARSH PARIMAL PATEL - 200520260, 
+DAXIL ASHISHKUMAR PATEL - 200520270, 
+KUNJESH KANTILAL RAMANI - 200515106
+
+ASSIGNMENT-3 */
+
+/* Set background gradient with animation */
+body {
+    background: linear-gradient(135deg, #FF9F01, #FF4E50, #FF00A0, #6A00FF);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    height: 100vh;
+}
+
+/* Define animation keyframes for background gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Add padding to spans */
+span {
+    padding-left: 30px;
+}
+
+/* Adjust margin for form check input */
+.form-check-input {
+    margin-left: 8px;
+}
+
+/* Styling for the main container */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    padding-bottom: 6px;
+    position: relative;
+}
+
+/* Styling for the main heading */
+h1 {
+    font-size: 28px;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling for the input group */
+.input-group {
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the todo input field */
+#todoInput {
+    border-radius: 5px 0 0 5px;
+}
+
+/* Styling for the add button */
+#addButton {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Styling for list items */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #dbdada;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+/* Remove margin from last list item */
+.list-group-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Highlight list item on hover */
+.list-group-item:hover {
+    background-color: #c4c4c4;
+}
+
+/* Styling for checked items */
+.checked span {
+    text-decoration: line-through;
+    color: #626262;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.checked {
+    background-color: #8dff8d !important;
+}
+
+/* Styling for delete button */
+.delete-button {
+    background: none;
+    border: none;
+    color: #f00;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Change delete button color on hover */
+.delete-button:hover {
+    color: #c00;
+    background-color: #f00;
+    color: #fff;
+}
+
+/* Styling for edit button */
+.edit-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+    display: none;
+    margin-right: 5px;
+}
+
+/* Display edit button on list item hover */
+.list-group-item:hover .edit-button {
+    display: block;
+}
+
+/* Change edit button color on hover */
+.list-group-item:hover .edit-button:hover {
+    color: #ffffff;
+}
+
+/* Styling for text alignment */
+.text-right {
+    margin-top: 20px;
+}
+
+/* Animation keyframes for fading out deleted items */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        background-color: #dbdada;
+    }
+
+    50% {
+        background-color: #f00;
+    }
+
+    100% {
+        opacity: 0;
+        background-color: #f00;
+    }
+}
+
+/* Apply fadeOut animation to deleted items */
+.deleted {
+    animation: fadeOut 0.5s forwards;
+}

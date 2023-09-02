@@ -1,0 +1,81 @@
+<!-- GROUP-2
+
+AARSH PARIMAL PATEL - 200520260, 
+DAXIL ASHISHKUMAR PATEL - 200520270, 
+KUNJESH KANTILAL RAMANI - 200515106
+
+ASSIGNMENT-3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8" />
+
+    <!-- Configure the viewport for better responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Set the title of the web page -->
+    <title>To-Do List</title>
+
+    <!-- Link to Bootstrap CSS for styling -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Link to Font Awesome CSS for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Link to your custom CSS file for additional styling -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Create a container for the main content -->
+    <div class="container mt-5">
+      <!-- Heading for the To-Do List -->
+      <h1 class="mb-4"><i class="fas fa-clipboard-list"></i> To-Do List</h1>
+
+      <!-- Input group for adding new to-do items -->
+      <div class="input-group mb-3">
+        <!-- Text input field for entering to-do items -->
+        <input
+          type="text"
+          id="todoInput"
+          class="form-control"
+          placeholder="Type your to-do item..."
+        />
+
+        <!-- Button to add a new to-do item -->
+        <div class="input-group-append">
+          <button id="addButton" class="btn btn-primary">
+            <i class="fas fa-calendar-plus"></i>  Add
+          </button>
+        </div>
+      </div>
+
+      <!-- Unordered list to display the to-do items -->
+      <ul class="list-group" id="todoList"></ul>
+
+      <!-- Button to delete all to-do items -->
+      <div class="text-right mb-3">
+        <button id="deleteAllButton" class="btn btn-warning">
+          <i class="fas fa-trash"></i> Delete All
+        </button>
+      </div>
+    </div>
+
+    <!-- Audio elements for sound effects -->
+    <audio id="dingSound" src="./audio/ding.wav"></audio>
+    <audio id="adddingSound" src="./audio/addding.wav"></audio>
+    <audio id="deletedingSound" src="./audio/deleteding.wav"></audio>
+    <audio id="editdingSound" src="./audio/editding.wav"></audio>
+    <audio id="errordingSound" src="./audio/errording.mp3"></audio>
+    
+    <!-- Include JavaScript file for interactive functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
